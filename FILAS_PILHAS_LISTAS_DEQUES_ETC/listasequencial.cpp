@@ -62,6 +62,11 @@ void listarIniToFim(Lista* lista)
 	}
 }
 
+void destruirLista(Lista lista)
+{
+	lista->size = 0;
+}
+
 int main()
 {	
 	int op = 0, pos = 0;
@@ -77,7 +82,7 @@ int main()
 		cout<<"[3] - Inserir no inicio Lista"<<endl;
 		cout<<"[4] - Inserir numa posicao Lista"<<endl;
 		cout<<"[5] - Exibir lista"<<endl;
-		cout<<"[6] - Exibir lista inversa"<<endl;
+		cout<<"[6] - Destruir lista"<<endl;
 		cin>>op;
 		switch(op)
 		{
@@ -112,6 +117,8 @@ int main()
 			case 5:
 				listarIniToFim(&lista);
 				break;
+			case 6:
+
 		}
 	}
 	
